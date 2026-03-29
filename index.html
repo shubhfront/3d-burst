@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeyVault — Premium Mechanical Keyboard</title>
+    <meta name="description" content="KeyVault — Experience the pinnacle of mechanical keyboard engineering. Scroll-driven 3D showcase of premium craftsmanship.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="main-nav" class="navbar">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                    <rect x="2" y="8" width="24" height="14" rx="3" stroke="#bd9dff" stroke-width="2"/>
+                    <rect x="6" y="12" width="4" height="3" rx="0.5" fill="#8a4cfc"/>
+                    <rect x="12" y="12" width="4" height="3" rx="0.5" fill="#8a4cfc"/>
+                    <rect x="18" y="12" width="4" height="3" rx="0.5" fill="#8a4cfc"/>
+                    <rect x="8" y="17" width="12" height="2" rx="0.5" fill="#bd9dff" opacity="0.5"/>
+                </svg>
+                <span>KEYVAULT</span>
+            </a>
+            <div class="nav-links">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#specs" class="nav-link">Specs</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+            </div>
+            <a href="#" class="nav-cta" id="buy-now-btn">Buy Now</a>
+        </div>
+    </nav>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scroll-progress">
+        <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+    </div>
+
+    <!-- Hero Section with Three.js Canvas -->
+    <section id="hero" class="hero-section">
+        <div class="hero-bg-gradient"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                PRECISION ENGINEERED
+            </div>
+            <h1 class="hero-title" id="hero-title">
+                <span class="title-line">KEY</span>
+                <span class="title-line title-accent">VAULT</span>
+            </h1>
+            <p class="hero-subtitle">Where engineering meets artistry.<br>Scroll to experience every angle.</p>
+        </div>
+        
+        <!-- Three.js Canvas Container -->
+        <canvas id="three-canvas"></canvas>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator" id="scroll-indicator">
+            <span class="scroll-text">SCROLL TO EXPLORE</span>
+            <div class="scroll-arrow">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M10 4V16M10 16L4 10M10 16L16 10" stroke="#bd9dff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Frame Counter -->
+        <div class="frame-counter" id="frame-counter">
+            <span class="frame-current">001</span>
+            <span class="frame-separator">/</span>
+            <span class="frame-total">192</span>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">WHAT MAKES IT DIFFERENT</span>
+                <h2 class="section-title">Built Without<br>Compromise</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card" id="feature-build">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 2L30 9V23L16 30L2 23V9L16 2Z" stroke="#bd9dff" stroke-width="1.5"/>
+                            <path d="M16 16L30 9M16 16L2 9M16 16V30" stroke="#8a4cfc" stroke-width="1" opacity="0.5"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Immutable Build</h3>
+                    <p class="feature-desc">Each frame is milled from a single block of 6061 aluminum, ensuring zero flex and absolute structural integrity.</p>
+                </div>
+                <div class="feature-card" id="feature-latency">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <circle cx="16" cy="16" r="13" stroke="#bd9dff" stroke-width="1.5"/>
+                            <path d="M16 8V16L22 22" stroke="#8a4cfc" stroke-width="1.5" stroke-linecap="round"/>
+                            <circle cx="16" cy="16" r="2" fill="#bd9dff"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Ultra Latency</h3>
+                    <p class="feature-desc">Proprietary 8000Hz polling rate technology delivering instantaneous response times for competitive precision.</p>
+                </div>
+                <div class="feature-card" id="feature-finish">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M4 16C4 9.37 9.37 4 16 4" stroke="#bd9dff" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M28 16C28 22.63 22.63 28 16 28" stroke="#8a4cfc" stroke-width="1.5" stroke-linecap="round"/>
+                            <circle cx="16" cy="16" r="5" stroke="#bd9dff" stroke-width="1.5"/>
+                            <circle cx="16" cy="16" r="1.5" fill="#8a4cfc"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Obsidian Finish</h3>
+                    <p class="feature-desc">Multi-stage PVD coating process creates a deep, light-absorbing finish that defies fingerprints and wear.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specs Section -->
+    <section id="specs" class="specs-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">TECHNICAL SPECIFICATIONS</span>
+                <h2 class="section-title">Every Detail,<br>Measured</h2>
+            </div>
+            <div class="specs-grid">
+                <div class="spec-item" id="spec-switches">
+                    <span class="spec-value">CHERRY MX</span>
+                    <span class="spec-label">Hot-Swap Switches</span>
+                </div>
+                <div class="spec-item" id="spec-polling">
+                    <span class="spec-value">8000<span class="spec-unit">Hz</span></span>
+                    <span class="spec-label">Polling Rate</span>
+                </div>
+                <div class="spec-item" id="spec-battery">
+                    <span class="spec-value">4000<span class="spec-unit">mAh</span></span>
+                    <span class="spec-label">Battery Capacity</span>
+                </div>
+                <div class="spec-item" id="spec-weight">
+                    <span class="spec-value">1.2<span class="spec-unit">kg</span></span>
+                    <span class="spec-label">Total Weight</span>
+                </div>
+                <div class="spec-item" id="spec-keys">
+                    <span class="spec-value">87</span>
+                    <span class="spec-label">Key Layout (TKL)</span>
+                </div>
+                <div class="spec-item" id="spec-rgb">
+                    <span class="spec-value">16.8<span class="spec-unit">M</span></span>
+                    <span class="spec-label">RGB Colors</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">VISUAL SHOWCASE</span>
+                <h2 class="section-title">Captured In<br>Every Light</h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item gallery-item-large" id="gallery-1">
+                    <img src="frames/output_0001.png" alt="KeyVault Keyboard - Cloud View" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Altitude Series</span>
+                    </div>
+                </div>
+                <div class="gallery-item" id="gallery-2">
+                    <img src="frames/output_0048.png" alt="KeyVault Keyboard - Side Profile" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Profile View</span>
+                    </div>
+                </div>
+                <div class="gallery-item" id="gallery-3">
+                    <img src="frames/output_0096.png" alt="KeyVault Keyboard - RGB Detail" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>RGB Spectrum</span>
+                    </div>
+                </div>
+                <div class="gallery-item" id="gallery-4">
+                    <img src="frames/output_0144.png" alt="KeyVault Keyboard - Top Down" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Aerial View</span>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-item-large" id="gallery-5">
+                    <img src="frames/output_0192.png" alt="KeyVault Keyboard - Final Frame" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>The Final Frame</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer" id="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span class="footer-logo">KEYVAULT</span>
+                <p class="footer-tagline">Precision-engineered for those who demand perfection.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Support</a>
+                <a href="#">Press</a>
+            </div>
+            <div class="footer-copy">
+                &copy; 2026 KeyVault. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Three.js from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
